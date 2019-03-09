@@ -7,7 +7,7 @@
 ######################################################################
 
 # STEP 1 - Import Features text file
-FEATURES <- read.table("~/Desktop/UCI HAR Dataset/features.txt", header = FALSE, sep = "", dec = ".")
+FEATURES <- read.table("~/features.txt", header = FALSE, sep = "", dec = ".")
 
         # STEP 1A - Examine Features table
         head(FEATURES) #Sample Data
@@ -18,7 +18,7 @@ FEATURES <- read.table("~/Desktop/UCI HAR Dataset/features.txt", header = FALSE,
         names(FEATURES) <- c("feature_id", "feature_label") #rename columns
 
 # STEP 2 - Import Activity Labels text file
-ACTIVITY <- read.table("~/Desktop/UCI HAR Dataset/activity_labels.txt", header = FALSE, sep = "", dec = ".")
+ACTIVITY <- read.table("~/activity_labels.txt", header = FALSE, sep = "", dec = ".")
 
         # STEP 2A - Examine Activity table
         head(ACTIVITY) #Sample Data
@@ -33,7 +33,7 @@ ACTIVITY <- read.table("~/Desktop/UCI HAR Dataset/activity_labels.txt", header =
 ######################################################################
 
 # STEP 3 - Import Subjects text file (1-30, the people that took part in the study)
-SUBJ_test <- read.table("~/Desktop/UCI HAR Dataset/test/subject_test.txt", header = FALSE, sep = "", dec = ".")
+SUBJ_test <- read.table("~/test/subject_test.txt", header = FALSE, sep = "", dec = ".")
 
         # STEP 3A - Examine Test Subjects table
         head(SUBJ_test) #Sample Data
@@ -44,7 +44,7 @@ SUBJ_test <- read.table("~/Desktop/UCI HAR Dataset/test/subject_test.txt", heade
         names(SUBJ_test) <- "subject_id"
 
 # STEP 4 - Import Data associated with each person that took part in the study
-DATA_test <- read.table("~/Desktop/UCI HAR Dataset/test/X_test.txt", header = FALSE, sep = "", dec = ".")
+DATA_test <- read.table("~/test/X_test.txt", header = FALSE, sep = "", dec = ".")
 
         # STEP 4A - Examine Data table
         head(DATA_test) #Sample Data
@@ -58,7 +58,7 @@ DATA_test <- read.table("~/Desktop/UCI HAR Dataset/test/X_test.txt", header = FA
         # to match the rows of the FEATURES$feature_label column
 
 # STEP 5 - Import numeric Labels associated with each row. These labels correspond to the type of activity
-LABELS_test <- read.table("~/Desktop/UCI HAR Dataset/test/y_test.txt", header = FALSE, sep = "", dec = ".")
+LABELS_test <- read.table("~/test/y_test.txt", header = FALSE, sep = "", dec = ".")
 
         # STEP 5A - Examine test Labels table
         head(LABELS_test) #Sample Data
@@ -75,7 +75,7 @@ LABELS_test <- read.table("~/Desktop/UCI HAR Dataset/test/y_test.txt", header = 
 ######################################################################
 
 # STEP 6 - Import Subjects text file (1-30, the people that took part in the study)
-SUBJ_train <- read.table("~/Desktop/UCI HAR Dataset/train/subject_train.txt", header = FALSE, sep = "", dec = ".")
+SUBJ_train <- read.table("~/train/subject_train.txt", header = FALSE, sep = "", dec = ".")
         
         # STEP 6A - Examine train Subjects table
         head(SUBJ_train) #Sample Data
@@ -86,7 +86,7 @@ SUBJ_train <- read.table("~/Desktop/UCI HAR Dataset/train/subject_train.txt", he
         names(SUBJ_train) <- "subject_id"
         
 # STEP 7 - Import Data associated with each person that took part in the study
-DATA_train <- read.table("~/Desktop/UCI HAR Dataset/train/X_train.txt", header = FALSE, sep = "", dec = ".")
+DATA_train <- read.table("~/train/X_train.txt", header = FALSE, sep = "", dec = ".")
         
         # STEP 7A - Examine train Data table
         head(DATA_train) #Sample Data
@@ -100,7 +100,7 @@ DATA_train <- read.table("~/Desktop/UCI HAR Dataset/train/X_train.txt", header =
         # to match the rows of the FEATURES$feature_label column
         
 # STEP 8 - Import numeric Labels associated with each row. These labels correspond to the type of activity
-LABELS_train <- read.table("~/Desktop/UCI HAR Dataset/train/y_train.txt", header = FALSE, sep = "", dec = ".")
+LABELS_train <- read.table("~/train/y_train.txt", header = FALSE, sep = "", dec = ".")
         
         # STEP 8A -Examine train Labels table
         head(LABELS_train) #Sample Data
