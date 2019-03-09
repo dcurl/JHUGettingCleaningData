@@ -196,3 +196,6 @@ filtered_data2 <- filtered_data
 # grouped by Activity and Subject
 library(dplyr)
 average_of_filtered_data <- filtered_data2 %>% group_by(subject_id, activity_label) %>% summarise_all(funs(mean))
+
+#Output Tidy Data
+average_of_filtered_data
